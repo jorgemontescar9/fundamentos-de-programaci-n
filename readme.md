@@ -1,0 +1,1 @@
+#En la carpeta Semana 1 viene el archivo Actividad 1.ipynb el cual contiene la calculadora y los ejercicios extra evaluables.
