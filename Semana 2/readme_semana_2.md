@@ -1,0 +1,1 @@
+En la carpeta semana dos viene el archivo CobroEntradasMuseo.py el cual contiene el ejercicio del museo, y tambien esta el archivo Ejercicios Extra Semana 2.ipynb el cual contiene los cuatro ejercicios extra que nos pidio esta semana.

@@ -26,7 +26,7 @@ for i in range(visitante):
     print(f"\nVisitante {i+1}:")
     edad = int(input("Ingrese su edad: "))
 
-    # Precios bases
+    
     if edad < 3:
         precio_base = niños_menores_de_3_años
     elif edad >= 3 and edad <= 17:
@@ -34,7 +34,7 @@ for i in range(visitante):
     else:
         precio_base = mayores_de_18_años
 
-    # Solicitud de tipo de descuento (DENTRO DEL CICLO):
+    # Solicitud de tipo de descuento:
     Tipo_de_descuento = input("¿Perteneces a alguno de estos? (1: Estudiante, 2: Profesor, 3: Adulto Mayor, 4: Ninguno): ")
     
     es_adulto_mayor = (Tipo_de_descuento == "3") or (edad >= 60)
@@ -54,17 +54,17 @@ for i in range(visitante):
         descuento = Sin_descuento
         tipo_str = "Ninguno (0%)"
 
-    # Cálculos individuales por visitante
+   
     descuento_final = precio_base * descuento
     sub_total = precio_base - descuento_final
     
-    # Acumuladores
+    
     monto_total_acumulado += sub_total
     boletos_procesados += 1
 
 # Impresión del resumen (FUERA DEL CICLO)
 print("\n" + "="*50)
-print("              RESUMEN FINAL DE COMPRA             ")
+print("Resumen de cobro:")
 print("="*50)
 print(f"Boletos cobrados    : {boletos_procesados}")
 print(f"Total general a pagar: ${monto_total_acumulado:.2f}")
