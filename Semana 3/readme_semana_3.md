@@ -1,0 +1,1 @@
+Profe en mi carpeta semana 3 vienen 3 partes diferentes, en avance de proyecto.py esta todo mi codigo, en diagrama_flujo.png esta mi diagrama el cual hice con PSeInt y en Descripcion de mi avance de proyecto.ipynb viene todo lo que se requeria en el word, el cual tambien le adjunte en la entrega del trabajo.
