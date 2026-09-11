@@ -1,16 +1,14 @@
-# --- FUNCIONES ---
-def sumar_tupla(tupla):
-    return sum(tupla)
+def sumar_tupla(tupla_numeros):
+    return sum(tupla_numeros)
 
 def buscar_telefono(diccionario, nombre):
-    return diccionario.get(nombre)
+    return diccionario.get(nombre, "Contacto no encontrado")
 
 def contar_palabras(texto):
     return len(texto.split())
 
-# --- SECCIONES ---
 def seccion_tuplas():
-    print("\n    TUPLAS    ")
+    print("\nTUPLAS")
     numeros = (10, 25, 30, 45, 50)
     print("Tercer elemento:", numeros[2])
     
@@ -19,60 +17,75 @@ def seccion_tuplas():
         n2 = float(input("Número adicional 2: "))
         nueva_tupla = numeros + (n1, n2)
         
-        lista = list(nueva_tupla)
-        lista.sort()
-        print("Lista ordenada:", lista)
-        print("Suma total:", sumar_tupla(nueva_tupla))
+        lista_ordenada = list(nueva_tupla)
+        lista_ordenada.sort()
+        print("Lista ordenada:", lista_ordenada)
+        
+        suma_total = sumar_tupla(nueva_tupla)
+        print("Suma total:", suma_total)
     except ValueError:
-        print("Error: Ingresa números válidos.")
+        print("Error: Por favor ingresa números válidos.")
 
 def seccion_diccionarios():
-    print("\n--- 2. DICCIONARIOS ---")
-    contactos = {"Carlos": "4421234567", "Ana": "4429876543", "Sofia": "4425551234"}
+    print("\n--- SECCION DICCIONARIOS ---")
+    contactos = {
+        "Ana": "555-0101",
+        "Luis": "555-0102",
+        "Mia": "555-0103"
+    }
     
-    nombre = input("Nuevo nombre: ").strip()
-    tel = input("Nuevo teléfono: ").strip()
-    contactos[nombre] = tel
+    nombre_nuevo = input("Nombre del nuevo contacto: ")
+    telefono_nuevo = input("Telefono del nuevo contacto: ")
+    contactos[nombre_nuevo] = telefono_nuevo
     
     print("\nContactos registrados:")
-    for c in contactos.keys():
-        print("-", c)
+    for nombre in contactos.keys():
+        print(nombre)
         
-    buscar = input("\nNombre a buscar: ").strip()
-    resultado = buscar_telefono(contactos, buscar)
-    print(f"Teléfono: {resultado}" if resultado else "Contacto no encontrado.")
+    nombre_buscar = input("\nNombre a buscar: ")
+    telefono = buscar_telefono(contactos, nombre_buscar)
+    print("El telefono es:", telefono)
 
 def seccion_excepciones():
-    print("\n--- 3. EXCEPCIONES ---")
+    print("\n--- SECCION EXCEPCIONES ---")
     try:
-        n1 = int(input("Primer entero: "))
-        n2 = int(input("Segundo entero: "))
-        print("Suma:", n1 + n2)
+        num1 = int(input("Primer numero entero: "))
+        num2 = int(input("Segundo numero entero: "))
         
-        if n2 == 0:
-            raise ZeroDivisionError("No se puede dividir entre cero.")
-        print("División:", n1 / n2)
+        suma = num1 + num2
+        print("La suma es:", suma)
+        
+        division = num1 / num2
+        print(f"{num1} dividido entre {num2} es: {division}")
         
     except ValueError:
-        print("Error: Debes ingresar números enteros.")
-    except ZeroDivisionError as e:
-        print("Error:", e)
+        print("Error: Tienes que meter numeros enteros.")
+    except ZeroDivisionError:
+        print("Error: No se puede dividir entre cero. Ingresa un divisor distinto de 0.")
 
 def seccion_strings():
-    print("\n--- 4. STRINGS ---")
-    mensaje = "Python es un lenguaje de programación muy potente y sencillo"
-    print("Mensaje:", mensaje)
-    print("Longitud:", len(mensaje))
-    print("Mayúsculas:", mensaje.upper())
-    print("Reemplazo:", mensaje.replace("potente", "versátil"))
-    print("Total de palabras:", contar_palabras(mensaje))
+    print("\n--- SECCION STRINGS ---")
+    mensaje = "Python es un lenguaje poderoso"
+    print("Longitud del mensaje:", len(mensaje))
+    print("En mayusculas:", mensaje.upper())
+    
+    mensaje_modificado = mensaje.replace("Python", "programacion")
+    print("Texto reemplazado:", mensaje_modificado)
+    
+    total_palabras = contar_palabras(mensaje)
+    print("Palabras totales:", total_palabras)
 
-# --- MENÚ PRINCIPAL ---
-def menu():
-    while True:
+def menu_principal():
+    opcion = ""
+    while opcion != "5":
         print("\n--- MENÚ PRINCIPAL ---")
-        print("1. Tuplas\n2. Diccionarios\n3. Excepciones\n4. Strings\n5. Finalizar")
-        opcion = input("Selecciona una opción (1-5): ").strip()
+        print("1. Tuplas")
+        print("2. Diccionarios")
+        print("3. Excepciones")
+        print("4. Strings")
+        print("5. Finalizar")
+        
+        opcion = input("Selecciona una opción (1-5): ")
         
         if opcion == "1":
             seccion_tuplas()
@@ -83,10 +96,8 @@ def menu():
         elif opcion == "4":
             seccion_strings()
         elif opcion == "5":
-            print("Programa finalizado.")
-            break
+            print("\nPrograma terminado.")
         else:
-            print("Opción no válida.")
+            print("Opcion no valida, pon un numero del 1 al 5.")
 
-if __name__ == "__main__":
-    menu()
+menu_principal()
