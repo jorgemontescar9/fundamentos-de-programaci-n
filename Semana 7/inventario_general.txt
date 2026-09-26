@@ -1,0 +1,16 @@
+--- ARCHIVO DE REGISTRO BASE: inventario_general.txt ---
+Estado: Activo
+
+--- REGISTRO [25/09/2026] | Registrado por: Jorge ---
+Producto: Bate de beisball azul marino | Material: Aluminio
+Precio Unitario: $800.00 | Retirados: 20
+Subtotal: $16000.00 | Descuento (10%): -$1600.00
+Total Pagado: $14400.00 | Stock Restante: 60
+----------------------------------------------------------
+
+--- REGISTRO [25/09/2026] | Registrado por: Jorge ---
+Producto: Bate de beisball athletics | Material: Alumnio
+Precio Unitario: $800.00 | Retirados: 2
+Subtotal: $1600.00 | Descuento: -$0.00
+Total Pagado: $1600.00 | Stock Restante: 13
+----------------------------------------------------------

@@ -1,0 +1,2 @@
+--- REGISTRO PREVIO EN: reporte_materiales.txt ---
+Estado: Disponible

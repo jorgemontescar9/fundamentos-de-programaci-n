@@ -1,0 +1,14 @@
+--- REGISTRO PREVIO EN: historial_productos.txt ---
+Estado: Disponible
+
+--- REGISTRO [04/03/2028] | Registrado por: pene ---
+Producto:            Bate de beisball gris athletics
+Material:            Madera
+Precio Unitario:     $920.00
+Stock Inicial:       70 unidades
+Unidades Retiradas:  40
+Subtotal:            $36800.00
+Descuento (15%):    -$5520.00
+Total Pagado:        $31280.00
+Stock Restante:      30 unidades
+----------------------------------------------------------

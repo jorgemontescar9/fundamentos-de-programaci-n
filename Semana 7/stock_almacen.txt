@@ -1,0 +1,2 @@
+--- REGISTRO PREVIO EN: stock_almacen.txt ---
+Estado: Disponible
